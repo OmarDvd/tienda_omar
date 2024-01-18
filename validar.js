@@ -47,7 +47,7 @@ function validar() {
         })
         .catch(error => {
             console.error('Error:', error);
-            alert("usuario o contraseña incorrectosjejej");
+            alert("usuario o contraseña incorrectos. Prueba de nuevo");
 
         });
 }
