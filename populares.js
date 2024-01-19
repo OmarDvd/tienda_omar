@@ -41,11 +41,11 @@ const cargarPeliculas = async () => {
         // en funcion del ordenActual hacemos una petición u otra y le pasamos la página que toque en función de nuestro uso en el momento
         // cada vez que cambiamos de orden, la página vuelve a 0 y solo se muestran los primeros 20 elementos
         if(ordenActual==="populares"){
-             respuesta = await fetch(`https://api.themoviedb.org/3/discover/movie?api_key=1dc5c454e07f67feeebe5884fc14b420&language=es-MX&include_adult=false&include_video=false&language=en-US&page=${pagina}&sort_by=popularity.desc`);
+             respuesta = await fetch(`https://api.themoviedb.org/3/discover/movie?api_key=1dc5c454e07f67feeebe5884fc14b420&page=${pagina}&sort_by=popularity.desc`);
         }else if(ordenActual==="menosPopulares"){
-             respuesta = await fetch(`https://api.themoviedb.org/3/discover/movie?api_key=1dc5c454e07f67feeebe5884fc14b420&language=es-MX&include_adult=false&include_video=false&language=en-US&page=${pagina}&sort_by=popularity.asc`);
+             respuesta = await fetch(`https://api.themoviedb.org/3/discover/movie?api_key=1dc5c454e07f67feeebe5884fc14b420&page=${pagina}&sort_by=popularity.asc`);
         }else{
-             respuesta = await fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=1dc5c454e07f67feeebe5884fc14b420&language=es-MX&include_adult=false&include_video=false&language=en-US&page=${pagina}`);
+             respuesta = await fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=1dc5c454e07f67feeebe5884fc14b420&page=${pagina}`);
 
         }
         /*cuando tengamos respuesta, y tengamos los datos solicitados con nosotros, dejamos de mostrar el cargando*/
