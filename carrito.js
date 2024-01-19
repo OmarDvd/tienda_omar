@@ -195,3 +195,23 @@ function comprar() {
         vaciarCarrito();
     }, 1000);
 }
+
+/*Cerrar sesión seteando las variables a vacio y la llave a false. Además avisamos del cierre de sesión y nos vamos para el login principal*/
+
+function cerrarSesion(){
+
+	sessionStorage.setItem('username', '');
+
+sessionStorage.setItem('email', '');
+sessionStorage.setItem('llave', false);
+
+sessionStorage.setItem('carrito', []);
+alert("Has cerrado sesión");
+	window.location.href = 'index.html';
+    
+
+}
+
+
+
+
